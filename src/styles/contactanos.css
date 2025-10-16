@@ -1,0 +1,240 @@
+.contactanos-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #071927 0%, #07395a 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #dac298;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #72b4cd;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: linear-gradient(145deg, rgba(13, 87, 134, 0.9) 0%, rgba(6, 95, 125, 0.95) 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(37, 128, 189, 0.6);
+  box-shadow: 0 10px 30px rgba(7, 25, 39, 0.4);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(7, 25, 39, 0.6);
+  border-color: #dac298;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.contact-details h3 {
+  color: #dac298;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #72b4cd;
+  padding-bottom: 0.5rem;
+}
+
+.address-main {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.address-city, .address-reference {
+  color: #e8f4fc;
+  margin-bottom: 0.3rem;
+}
+
+.phone-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.phone-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.phone-number {
+  color: #72b4cd;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(114, 180, 205, 0.3);
+}
+
+.phone-link:hover .phone-number {
+  color: #dac298;
+  background: rgba(218, 194, 152, 0.1);
+  border-color: #dac298;
+  transform: translateX(5px);
+}
+
+.website-link {
+  color: #72b4cd;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px solid rgba(114, 180, 205, 0.3);
+  transition: all 0.3s ease;
+}
+
+.website-link:hover {
+  color: #dac298;
+  background: rgba(218, 194, 152, 0.1);
+  border-color: #dac298;
+  transform: translateY(-2px);
+}
+
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hours-card, .info-card {
+  background: linear-gradient(145deg, rgba(13, 87, 134, 0.9) 0%, rgba(6, 95, 125, 0.95) 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(37, 128, 189, 0.6);
+  box-shadow: 0 8px 25px rgba(7, 25, 39, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.hours-card h3, .info-card h4 {
+  color: #dac298;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #72b4cd;
+  padding-bottom: 0.5rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(114, 180, 205, 0.2);
+}
+
+.hour-item:last-child {
+  border-bottom: none;
+}
+
+.days {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.time {
+  color: #72b4cd;
+  font-weight: 500;
+}
+
+.time.closed {
+  color: #ff6b6b;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  color: #e8f4fc;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(114, 180, 205, 0.2);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.info-card li:before {
+  content: "✓";
+  color: #dac298;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.info-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .contact-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hour-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

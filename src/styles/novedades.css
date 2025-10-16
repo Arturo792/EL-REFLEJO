@@ -1,0 +1,229 @@
+/* novedades.css */
+.novedades {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #071927 0%, #07395a 100%);
+  min-height: 100vh;
+}
+
+.novedades h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #dac298;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.novedades-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #72b4cd;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+}
+
+/* Grid alternado */
+.novedades-grid-alternado {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cada item alternado */
+.novedad-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: linear-gradient(145deg, #065f7d 0%, #0d5786 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  border: 2px solid rgba(37, 128, 189, 0.3);
+  transition: all 0.3s ease;
+}
+
+.novedad-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border-color: #2580bd;
+}
+
+/* Contenedor de texto */
+.novedad-texto {
+  padding: 1rem;
+}
+
+.novedad-titulo {
+  color: #dac298;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.novedad-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #dac298, #72b4cd);
+  border-radius: 3px;
+}
+
+.novedad-descripcion {
+  color: #e8f4fc;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Contenedor de imagen */
+.novedad-imagen-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.novedad-item:hover .novedad-imagen-container {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.novedad-imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.novedad-item:hover .novedad-imagen {
+  transform: scale(1.05);
+}
+
+/* Efectos de scroll animation */
+.novedad-item {
+  animation: fadeInUp linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .novedad-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .novedad-titulo::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* En móvil, mantener el orden original */
+  .novedad-item.imagen-texto .novedad-imagen-container {
+    order: 1;
+  }
+  
+  .novedad-item.imagen-texto .novedad-texto {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .novedades {
+    padding: 3rem 1rem;
+  }
+  
+  .novedades h1 {
+    font-size: 2.5rem;
+  }
+  
+  .novedades-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .novedades-grid-alternado {
+    gap: 3rem;
+  }
+  
+  .novedad-item {
+    padding: 1.5rem;
+  }
+  
+  .novedad-titulo {
+    font-size: 1.5rem;
+  }
+  
+  .novedad-descripcion {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .novedades {
+    padding: 2rem 0.5rem;
+  }
+  
+  .novedades h1 {
+    font-size: 2rem;
+  }
+  
+  .novedad-item {
+    padding: 1rem;
+  }
+  
+  .novedad-titulo {
+    font-size: 1.3rem;
+  }
+  
+  .novedad-texto {
+    padding: 0.5rem;
+  }
+}
+
+/* Efecto de brillo al hover */
+.novedad-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(218, 194, 152, 0.1),
+    transparent
+  );
+  transition: left 0.8s ease;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.novedad-item:hover::before {
+  left: 100%;
+}

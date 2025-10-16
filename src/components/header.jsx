@@ -18,6 +18,7 @@ function Header() {
           <li><Link to="/home">Inicio</Link></li>
           <li><Link to="/nosotros">Nosotros</Link></li>
           <li><Link to="/galeria">Galería</Link></li>
+          <li><Link to="/novedades">Novedades</Link></li> {/* ← Nueva opción agregada */}
           <li><Link to="/contactanos">Contáctanos</Link></li>
         </ul>
       </nav>

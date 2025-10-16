@@ -30,8 +30,8 @@ function Galeria() {
     {
       id: 2,
       imagen: imagen2,
-      titulo: "Puerta Corrediza de Aluminio",
-      descripcion: "Sistema corredizo para espacios reducidos",
+      titulo: "Puerta de entrada",
+      descripcion: "Elegante puerta con vidrio esmerilado",
       categoria: "Puertas"
     },
     {
@@ -93,8 +93,8 @@ function Galeria() {
     {
       id: 11,
       imagen: imagen11,
-      titulo: "Espejo de Baño Personalizado",
-      descripcion: "Espejo con iluminación integrada",
+      titulo: "Cancel de baño",
+      descripcion: "Cancel blano de baño",
       categoria: "Baños"
     },
     {

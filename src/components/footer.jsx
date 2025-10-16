@@ -28,7 +28,7 @@ function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>Fundador: Josue Hilario Aguilar Huerta </p>
+        <p>Fundador: Hilario Aguilar Bribiesca </p>
         <p>&copy; 2025 EL REFLEJO Vidriería. Todos los derechos reservados.</p>
       </div>
     </footer>
